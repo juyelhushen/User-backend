@@ -1,5 +1,6 @@
 package com.jskool.springcrudreact.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,11 +17,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    private String username;
     private String name;
+    private String username;
     private String email;
-
-
 
 }
