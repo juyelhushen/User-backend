@@ -13,5 +13,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#swagger
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
 server:
   port: 3001
+
