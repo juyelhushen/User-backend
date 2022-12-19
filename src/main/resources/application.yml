@@ -1,23 +1,59 @@
 spring:
+#database
   datasource:
     url: jdbc:mysql://localhost:3306/react
     username: root
     password: 8899
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+#Jpa/Hibernate
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
 
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+#Redis-cache
+
+  cache:
+    type: redis
+    cache-names:
+      - cache1
+      - cache2
+    redis:
+      time-to-live: 60000
+      cache-null-values: true
+
+  redis:
+    host: localhost
+    port: 6379
+
+
+
+
 #swagger
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
 
+#server-port
+
 server:
   port: 3001
+
+#Redis
+
+
+
+
+
+logging:
+  level:
+    web: debug
+
+
+
 
