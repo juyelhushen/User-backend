@@ -16,8 +16,6 @@ spring:
       hibernate:
       dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
-#Redis-cache
-
   cache:
     type: redis
     cache-names:
@@ -33,7 +31,6 @@ spring:
 
 
 
-
 #swagger
   mvc:
     pathmatch:
@@ -45,7 +42,6 @@ server:
   port: 3001
 
 #Redis
-
 
 
 
